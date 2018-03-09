@@ -6,7 +6,7 @@ services:
         ports:
             - "8000:8000"
         command: "go run main.go -p 8000"
-    go_build_mac:
+    go_build:
         image: golang:1.8
         working_dir: /go/src/github.com/svenfinke/botChallenge
         volumes:
