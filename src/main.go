@@ -2,6 +2,7 @@ package main
 
 import (
 	"flag"
+	"fmt"
 
 	"github.com/svenfinke/botChallenge/server"
 )
@@ -16,6 +17,7 @@ func init() {
 }
 
 func main() {
+	fmt.Println("SERVER started on port: " + serverPort)
 	server := server.Server{Port: serverPort}
 	server.Run()
 }

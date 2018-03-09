@@ -1,0 +1,14 @@
+version: '2'
+services:
+    server:
+        build: .
+        image: bot-challenge
+        ports:
+            - "8000:8000"
+        command: "go run main.go -p 8000"
+    go_build_mac:
+        image: golang:1.8
+        working_dir: /go/src/github.com/svenfinke/botChallenge
+        volumes:
+            - ./src:/go/src/github.com/svenfinke/botChallenge
+        command: "/bin/bash -c 'cd /go/src/github.com/svenfinke/botChallenge ; go get ; go build -v' "
