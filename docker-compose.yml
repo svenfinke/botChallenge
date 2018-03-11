@@ -6,9 +6,13 @@ services:
         ports:
             - "8000:8000"
         command: "go run main.go -p 8000"
+        volumes:
+            - ./src:/go/src/app
     go_build:
         image: golang:1.8
         working_dir: /go/src/github.com/svenfinke/botChallenge
+        env_file:
+            - .env
         volumes:
             - ./src:/go/src/github.com/svenfinke/botChallenge
         command: "/bin/bash -c 'cd /go/src/github.com/svenfinke/botChallenge ; go get ; go build -v' "

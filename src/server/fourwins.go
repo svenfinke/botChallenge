@@ -9,7 +9,7 @@ type Fourwins struct {
 }
 
 func (game *Fourwins) GetConfig() GameConfig {
-	return GameConfig{2, 1 * time.Second}
+	return GameConfig{2, 2 * time.Second}
 }
 
 func (game *Fourwins) Move(player *Player) {
