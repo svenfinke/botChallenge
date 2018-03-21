@@ -1,3 +1,5 @@
+[![Code Quality](https://goreportcard.com/badge/github.com/svenfinke/botChallenge)](https://goreportcard.com/report/github.com/svenfinke/botChallenge)
+
 # botChallenge
 
 This project is aiming to provide a service that can host various
